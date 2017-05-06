@@ -172,11 +172,22 @@ class GameScene: SKScene {
     }
     
     func gameOver(win: Bool) {
-        self.pauseLvl()
-        self.removeAllActions()
-        self.removeAllChildren()
-        self.removeFromParent()
-        self.gameNavigationProtocol.gameOver(win: win)
+        let explosion = SKEmitterNode(fileNamed: "Explosion")!
+        explosion.position = self.player.position
+        self.addChild(explosion)
+        self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
+        self.player.stopShoting()
+        self.player.removeFromParent()
+        
+        self.run(SKAction.wait(forDuration: 2)) {
+            explosion.removeFromParent()
+            self.pauseLvl()
+            self.removeAllActions()
+            self.removeAllChildren()
+            self.removeFromParent()
+            self.gameNavigationProtocol.gameOver(win: win)
+        }
+
     }
     
     

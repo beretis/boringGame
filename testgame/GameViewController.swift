@@ -38,11 +38,21 @@ extension GameViewController: GameNavigationProtocol {
     func gameOver(win: Bool) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateInitialViewController()!
-        self.present(vc, animated: true) { 
-            if win {
-                UIAlertController(title: "CONGRATS", message: "YOU WON THIS BORING GAME, ENJOY", preferredStyle: UIAlertControllerStyle.alert).show(vc, sender: self)
-            }
+        if win {
+            let winAlert = UIAlertController(title: "CONGRATS", message: "YOU WON THIS BORING GAME, ENJOY", preferredStyle: UIAlertControllerStyle.alert)
+            winAlert.addAction(UIAlertAction(title: "I WANNA FEEL SUCCESS AGAIN", style: UIAlertActionStyle.destructive, handler: { [unowned self] (action) in
+                self.present(vc, animated: true, completion: nil)
+            }))
+            winAlert.show(self)
+        } else {
+            let loosAlert = UIAlertController(title: "GAME OVER", message: "I KNOW I KNOW ITS PRETTY BORING", preferredStyle: UIAlertControllerStyle.alert)
+            loosAlert.addAction(UIAlertAction(title: "I'M GONNA TRY WHATSOEVER", style: UIAlertActionStyle.destructive, handler: { [unowned self] (action) in
+                self.present(vc, animated: true, completion: nil)
+            }))
+            loosAlert.show(self)
+
         }
+
         
     }
     

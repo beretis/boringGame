@@ -20,6 +20,7 @@
 		2830F1D11EB9D6A50031F786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2830F1CF1EB9D6A50031F786 /* LaunchScreen.storyboard */; };
 		286FAFD31EBCC415002FFF68 /* Upgrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286FAFD21EBCC415002FFF68 /* Upgrade.swift */; };
 		28B4094A1EBD4AFF007B1FE0 /* NewGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B409491EBD4AFF007B1FE0 /* NewGameVC.swift */; };
+		28B4094C1EBD6CF6007B1FE0 /* UIAlertController+Convience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4094B1EBD6CF6007B1FE0 /* UIAlertController+Convience.swift */; };
 		28B7E0551EBD0EE2001D7D92 /* MathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B7E0541EBD0EE2001D7D92 /* MathScene.swift */; };
 		28B7E0581EBD30B9001D7D92 /* GameLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B7E0571EBD30B9001D7D92 /* GameLevel.swift */; };
 		28B7E05A1EBD30CE001D7D92 /* MathLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B7E0591EBD30CE001D7D92 /* MathLevel.swift */; };
@@ -44,6 +45,7 @@
 		2830F1D21EB9D6A50031F786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286FAFD21EBCC415002FFF68 /* Upgrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upgrade.swift; sourceTree = "<group>"; };
 		28B409491EBD4AFF007B1FE0 /* NewGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameVC.swift; sourceTree = "<group>"; };
+		28B4094B1EBD6CF6007B1FE0 /* UIAlertController+Convience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Convience.swift"; sourceTree = "<group>"; };
 		28B7E0541EBD0EE2001D7D92 /* MathScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathScene.swift; sourceTree = "<group>"; };
 		28B7E0571EBD30B9001D7D92 /* GameLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevel.swift; sourceTree = "<group>"; };
 		28B7E0591EBD30CE001D7D92 /* MathLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLevel.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				28B7E0571EBD30B9001D7D92 /* GameLevel.swift */,
 				28B7E0591EBD30CE001D7D92 /* MathLevel.swift */,
 				28B409491EBD4AFF007B1FE0 /* NewGameVC.swift */,
+				28B4094B1EBD6CF6007B1FE0 /* UIAlertController+Convience.swift */,
 			);
 			path = testgame;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				TargetAttributes = {
 					2830F1BC1EB9D6A50031F786 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 4CRG2TF545;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -208,6 +212,7 @@
 				28B4094A1EBD4AFF007B1FE0 /* NewGameVC.swift in Sources */,
 				2819D71F1EBCA8A0000E7FEF /* Monster.swift in Sources */,
 				28B7E0581EBD30B9001D7D92 /* GameLevel.swift in Sources */,
+				28B4094C1EBD6CF6007B1FE0 /* UIAlertController+Convience.swift in Sources */,
 				28B7E05A1EBD30CE001D7D92 /* MathLevel.swift in Sources */,
 				2830F1C11EB9D6A50031F786 /* AppDelegate.swift in Sources */,
 			);
@@ -334,7 +339,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4CRG2TF545;
 				INFOPLIST_FILE = testgame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beretis.testgame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,7 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4CRG2TF545;
 				INFOPLIST_FILE = testgame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beretis.testgame;
 				PRODUCT_NAME = "$(TARGET_NAME)";

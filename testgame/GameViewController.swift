@@ -18,11 +18,11 @@ class GameViewController: UIViewController {
         let scene = GameScene(size: view.bounds.size)
         scene.gameNavigationProtocol = self
         let skView = view as! SKView
-        skView.showsFPS = true
+//        skView.showsFPS = true
         skView.backgroundColor = UIColor.white
-        skView.showsNodeCount = true
+//        skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
-        skView.showsPhysics = true
+//        skView.showsPhysics = true
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
     }

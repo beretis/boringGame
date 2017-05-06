@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SEI-aD-uVH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="testgame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="24"/>
+        </scene>
+        <!--New GameVC-->
+        <scene sceneID="CIt-VC-ojh">
+            <objects>
+                <viewController id="SEI-aD-uVH" customClass="NewGameVC" customModule="testgame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uU1-vW-cdL"/>
+                        <viewControllerLayoutGuide type="bottom" id="iuF-Kj-Yeo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jkv-lb-2HC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="F5Z-3w-afF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boring Space Ship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE2-CC-Q9y">
+                                <rect key="frame" x="41" y="20" width="292" height="41.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZO-KF-NI7">
+                                <rect key="frame" x="163.5" y="312.5" width="48" height="41"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="QJ3-gG-c3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gE2-CC-Q9y" firstAttribute="leading" secondItem="jkv-lb-2HC" secondAttribute="leadingMargin" constant="25" id="0Km-x3-jyD"/>
+                            <constraint firstItem="eZO-KF-NI7" firstAttribute="centerY" secondItem="jkv-lb-2HC" secondAttribute="centerY" id="Dzj-Ky-xkz"/>
+                            <constraint firstItem="eZO-KF-NI7" firstAttribute="centerX" secondItem="jkv-lb-2HC" secondAttribute="centerX" id="F5A-vl-Tai"/>
+                            <constraint firstAttribute="bottom" secondItem="F5Z-3w-afF" secondAttribute="bottom" id="U8l-LK-UvB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gE2-CC-Q9y" secondAttribute="trailing" constant="26" id="WqY-G6-TDd"/>
+                            <constraint firstItem="gE2-CC-Q9y" firstAttribute="top" secondItem="jkv-lb-2HC" secondAttribute="topMargin" constant="20" id="Yhl-aq-zEj"/>
+                            <constraint firstItem="F5Z-3w-afF" firstAttribute="top" secondItem="jkv-lb-2HC" secondAttribute="top" id="h6s-k4-nCC"/>
+                            <constraint firstItem="F5Z-3w-afF" firstAttribute="leading" secondItem="jkv-lb-2HC" secondAttribute="leading" id="ogk-cC-Zih"/>
+                            <constraint firstAttribute="trailing" secondItem="F5Z-3w-afF" secondAttribute="trailing" id="pXW-vT-Kug"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hje-Pc-U9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bgImage" width="1080" height="1920"/>
+    </resources>
+</document>
